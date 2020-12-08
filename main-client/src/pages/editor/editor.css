@@ -1,0 +1,18 @@
+.editor-container {
+    flex: 1;
+    display: flex;
+}
+
+.editor-container>.radar-view {
+    min-width: 20px;
+}
+
+.editor {
+    flex: 1;
+    height: 90vh;
+    font-size: 1.2rem;
+}
+
+.radar-view {
+    min-width: 20px;
+}

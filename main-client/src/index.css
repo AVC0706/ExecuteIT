@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.sc-header--img {
+    width: 70px;
+}
+
+#spinner {
+    display: block;
+    position: fixed;
+    z-index: 9999999999;
+    /* High z-index so it is on top of the page */
+    top: 40%;
+    right: 50%;
+    /* or: left: 50%; */
+    /* margin-top: -px; */
+    /* half of the elements height */
+    /* margin-right: -..px; */
+    /* half of the elements widht */
+}

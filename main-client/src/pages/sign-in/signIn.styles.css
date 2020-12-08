@@ -1,0 +1,20 @@
+#homepage {
+    /* background-color: #d9d9d9; */
+    height: 100%;
+    /*background-image: linear-gradient( #fdfbfb, #ebedee);*/
+}
+
+#login-card {
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 3px 6px 0 rgba(0, 0, 0, 0.19);
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60vw;
+    height: 70vh;
+    border-radius: 10px;
+}
+
+#animation-video {
+    width: 75%;
+}
