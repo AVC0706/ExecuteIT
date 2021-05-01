@@ -6,6 +6,7 @@ const querystring = require('querystring');
 const { User } = require('../models/User')
 const Room = require('../models/Room');
 const { jwtAuth } = require('../middlewares/auth');
+const mysql = require('../configs/db') 
 
 router.get('/', async(req, res) => {
     try {
@@ -14,8 +15,12 @@ router.get('/', async(req, res) => {
         const token = querystring.parse(requestURI.split('?')[1]).token
         const email = jwt.verify(token, process.env.JWT_SECRET).data.email
 
-        const user = await User.findOne({ email: email })
-        const room = await Room.findOne({ _id: roomId })
+        const user = await mysql.query(' SELECT * FROM User WHERE email= ? ', [email])
+        const room = await mysql.query(' SELECT * FROM Room WHERE id= ? ', [roomId])
+
+        // const user = await User.findOne({ email: email })
+        // const room = await Room.findOne({ _id: roomId })
+
         const userId = user._id
 
         //check id user is host
